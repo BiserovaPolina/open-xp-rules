@@ -1,0 +1,4 @@
+Description: 'Detected PowerShell execution loading Invoke-Mimikatz script from the PowerSploit repository. This indicates an attempt to extract credentials using Mimikatz.'
+EventDescriptions:
+  - LocalizationId: 'corrname_Task2_02_04'
+    EventDescription: ''

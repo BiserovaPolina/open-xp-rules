@@ -1,0 +1,31 @@
+ContentAutoName: Task2_02_04
+ExpertContext:
+  Created: 27.04.2025
+  Updated: 28.04.2025
+  KnowledgeHolders:
+    - Biserova
+  Usecases:
+    - |-
+      Обнаружение атак с использованием Mimikatz для кражи учетных данных.
+      Мониторинг подозрительных PowerShell скриптов на конечных устройствах.
+      Предотвращение утечек данных через использование Mimikatz.
+  Falsepositives:
+    - Этот сигнал может быть ложным срабатыванием, если в системе выполняются разрешенные скрипты PowerShell, использующие внешние ресурсы, например, для автоматизированных задач или удаленного администрирования, не связанных с вредоносной активностью.
+  References:
+    - https://github.com/gentilkiwi/mimikatz
+  Improvements:
+    - |-
+      Уточнить условия, при которых PowerShell скрипты используются легитимно.
+      Обновить для учета новых версий PowerShell и возможных изменений в методах загрузки скриптов.
+      Улучшить валидацию командной строки для снижения ложных срабатываний.
+  DataSources:
+    - Provider: Microsoft-Windows-Sysmon
+      EventID: []
+ObjectId: SEC-CR-203627693
+EventDescriptions:
+  - Criteria: correlation_name = "Task2_02_04"
+    LocalizationId: corrname_Task2_02_04
+ContentRelations:
+  Implements:
+    ATTACK:
+      credential-access: []
