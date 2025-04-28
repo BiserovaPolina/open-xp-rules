@@ -1,0 +1,4 @@
+Description: 'Обнаружен запуск PowerShell с загрузкой скрипта Invoke-Mimikatz из репозитория PowerSploit. Это свидетельствует о попытке получения учетных данных с использованием Mimikatz.'
+EventDescriptions:
+  - LocalizationId: 'corrname_Task2_02_04'
+    EventDescription: 'Процесс: powershell.exeКомандная строка содержит ссылку на Invoke-Mimikatz.ps1 или загрузку из PowerSploitВысокий уровень целостности процесса (High Integrity Level)Прямая загрузка скрипта через IEX (New-Object Net.WebClient).DownloadString(...)'
